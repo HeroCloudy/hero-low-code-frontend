@@ -7,7 +7,7 @@
  * 2022/6/29 15:52   dscloudy    Create File.
  -->
 <template>
-  <el-button size="small" type="primary" @click="onPreviewClick">预览</el-button>
+  <el-button size="small" type="default" @click="onPreviewClick">预览</el-button>
   <ha-dialog v-model="visible"
              fullscreen
              title="效果预览">

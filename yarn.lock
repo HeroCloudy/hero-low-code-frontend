@@ -5227,9 +5227,9 @@ he@1.2.x:
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
 hero-admin-ui@^0.1.12:
-  version "0.1.12"
-  resolved "https://registry.npmjs.org/hero-admin-ui/-/hero-admin-ui-0.1.12.tgz#1aa7f2863456283f585f44890f9a266bcec55cd6"
-  integrity sha512-I+Y4SNKFxId1GpVzOuRdjL8NzlFoBkI+U7lO21w8Wfw7TkTEnUC1SkPLzBBakcNZlchyE3u+2KzsWqFNa+z3og==
+  version "0.1.13"
+  resolved "https://registry.npmjs.org/hero-admin-ui/-/hero-admin-ui-0.1.13.tgz#62dc8bebcb6166b90ca19f8017300c0cc98b644b"
+  integrity sha512-O0orzjXElbHr49rEf1L8mYFCEukzB5GQm3JrPfcix1IjGq0OVBcf09aGNxlcV1YWtnZDstZsaM0LvHL/INLlUA==
   dependencies:
     "@element-plus/icons-vue" "^0.2.6"
     axios "^0.26.1"

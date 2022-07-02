@@ -6,6 +6,7 @@ import ElementPlus from 'element-plus'
 import HeroAdminUi from 'hero-admin-ui'
 import 'element-plus/dist/index.css'
 import 'hero-admin-ui/dist/hero-admin-ui.css'
+import '@/scss/index.scss'
 
 const app = createApp(App)
 app.use(ElementPlus)

@@ -7,26 +7,27 @@
  * 2022/6/27 14:37   dscloudy    Create File.
  -->
 <template>
-  <ha-page flex-direction="row" class="schema-gen">
-    <!--  左侧：属性 prop 列表  -->
-    <div class="left">
-      <prop-list :prop-list="list" @current-prop-change="onCurrentPropChange"></prop-list>
-    </div>
+  <gen-demo-page>
+    <template #header>
+      <tool-preview :prop-list="list"></tool-preview>
+    </template>
 
-    <!--  中间：属性值 attr 列表  -->
-    <div class="center">
-      <div class="top">
-        <div style="flex: 1"></div>
-        <tool-preview :prop-list="list"></tool-preview>
-      </div>
-      <attr-list style="flex: 1;" v-if="currentProp" :current-prop="currentProp"></attr-list>
-    </div>
+    <template #left>
+      <!--  左侧：属性 prop 列表  -->
+      <prop-list :prop-list="list"
+                 @current-prop-change="onCurrentPropChange"/>
+    </template>
 
-    <!--  左侧：预览 preview 列表  -->
-    <div class="right">
-      <preview-list :prop-list="list"></preview-list>
-    </div>
-  </ha-page>
+    <template #center>
+      <!--  中间：属性值 attr 列表  -->
+      <attr-list v-if="currentProp"
+                 :current-prop="currentProp"/>
+    </template>
+
+    <template #right>
+      <preview-list :prop-list="list"/>
+    </template>
+  </gen-demo-page>
 </template>
 
 <script lang="ts" setup>
@@ -36,6 +37,7 @@ import PreviewList from './component/preview-list.vue'
 import AttrList from './component/attr-list.vue'
 import { buildPropItem, Prop } from './common/commons'
 import ToolPreview from './component/tool-preview.vue'
+import GenDemoPage from '@/components/gen-demo-page.vue'
 
 const currentProp = ref<Prop>()
 
@@ -47,43 +49,11 @@ const onCurrentPropChange = (prop: Prop) => {
 </script>
 
 <style scoped lang="scss">
-$bg: #f0fcdc;
+@import "../../scss/common.scss";
 
-.schema-gen {
+.page {
   width: 100%;
   height: 100%;
-
-  .left {
-    width: 300px;
-  }
-
-  .right {
-    width: 350px;
-  }
-
-  .center {
-    flex: 1;
-    margin: 0 10px;
-    display: flex;
-    flex-direction: column;
-
-    .top {
-      background-color: $bg;
-      padding: 10px;
-      display: flex;
-    }
-  }
-
-  //.open {
-  //  width: 0;
-  //  height: 0;
-  //  margin: auto auto;
-  //  border-top: 10px solid transparent;
-  //  border-right: 10px solid transparent;
-  //  border-bottom: 10px solid transparent;
-  //  border-left: 10px solid #333333;
-  //
-  //}
 
   // 可删除 BEGIN
   .left,

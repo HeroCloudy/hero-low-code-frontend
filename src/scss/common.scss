@@ -1,0 +1,19 @@
+$bg: #f0fcdc;
+$border-color: #ddd;
+$leftWidth: 300px;
+$rightWidth: 350px;
+
+.fc {
+  display: flex;
+  flex-direction: column;
+}
+.fr {
+  display: flex;
+  flex-direction: row;
+}
+.f1 {
+  flex: 1;
+}
+
+
+
