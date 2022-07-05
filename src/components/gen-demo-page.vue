@@ -87,6 +87,7 @@ import NavList from '@/components/nav-list.vue'
   .content {
     @extend .f1;
     @extend .fr;
+    overflow: hidden;
 
     .left {
       width: 300px;

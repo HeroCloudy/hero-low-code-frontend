@@ -3,7 +3,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 export const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/schema-gen'
+    redirect: '/form-gen'
   },
   {
     path: '/schema-gen',
